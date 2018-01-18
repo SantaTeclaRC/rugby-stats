@@ -10,6 +10,7 @@ import { LineupsPage } from '../pages/lineups/lineups';
 import { LineupPage } from '../pages/lineup/lineup';
 import { RefereesPage } from '../pages/referees/referees';
 import { LiveMatchPage } from '../pages/live-match/live-match';
+import { TimerComponent } from '../components/timer/timer';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LiveMatchPage } from '../pages/live-match/live-match';
     LineupsPage,
     LineupPage,
     RefereesPage,
-    LiveMatchPage
+    LiveMatchPage,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
