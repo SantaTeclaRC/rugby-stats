@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LineupPage } from '../lineup/lineup';
 
 @IonicPage()
 @Component({
-  selector: 'page-lineups',
-  templateUrl: 'lineups.html',
+  selector: 'page-lineup',
+  templateUrl: 'lineup.html',
 })
-export class LineupsPage {
-
-  localRoot = LineupPage;
-  visitRoot = LineupPage;
-  refereeRoot = LineupPage;
+export class LineupPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
