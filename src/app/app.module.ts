@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { LineupsPage } from '../pages/lineups/lineups';
 import { LineupPage } from '../pages/lineup/lineup';
 import { RefereesPage } from '../pages/referees/referees';
+import { LiveMatchPage } from '../pages/live-match/live-match';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RefereesPage } from '../pages/referees/referees';
     HomePage,
     LineupsPage,
     LineupPage,
-    RefereesPage
+    RefereesPage,
+    LiveMatchPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { RefereesPage } from '../pages/referees/referees';
     HomePage,
     LineupsPage,
     LineupPage,
-    RefereesPage
+    RefereesPage,
+    LiveMatchPage
   ],
   providers: [
     StatusBar,
