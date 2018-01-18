@@ -8,13 +8,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LineupsPage } from '../pages/lineups/lineups';
 import { LineupPage } from '../pages/lineup/lineup';
+import { RefereesPage } from '../pages/referees/referees';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     LineupsPage,
-    LineupPage
+    LineupPage,
+    RefereesPage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { LineupPage } from '../pages/lineup/lineup';
     MyApp,
     HomePage,
     LineupsPage,
-    LineupPage
+    LineupPage,
+    RefereesPage
   ],
   providers: [
     StatusBar,
