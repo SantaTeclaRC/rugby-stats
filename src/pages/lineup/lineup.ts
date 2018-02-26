@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Team } from '../../models/team';
 
 @IonicPage()
 @Component({
@@ -7,8 +8,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'lineup.html',
 })
 export class LineupPage {
+  team: Team;
+  playersQty;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.team = this.navParams.get('team');
+    this.playersQty = Array(7).fill(0, 0, 7).map((x, i) => i + 1);
   }
-
 }
