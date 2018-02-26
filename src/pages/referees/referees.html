@@ -3,9 +3,9 @@
     <ion-item>
       <ion-label>Principal</ion-label>
       <ion-select>
-        <ion-option>Fátima Calderón</ion-option>
-        <ion-option>Adriana Castillo</ion-option>
-        <ion-option>David Alfaro <3</ion-option>
+        <ion-option *ngFor="let referee of referees | async">
+          {{referee.first_name + ' ' + referee.other_names}}
+        </ion-option>
       </ion-select>
     </ion-item>
   </ion-card>
@@ -13,9 +13,9 @@
     <ion-item>
       <ion-label>Linea 1</ion-label>
       <ion-select>
-        <ion-option>Fátima Calderón</ion-option>
-        <ion-option>Adriana Castillo</ion-option>
-        <ion-option>David Alfaro <3</ion-option>
+        <ion-option *ngFor="let referee of referees | async">
+          {{referee.first_name + ' ' + referee.other_names}}
+        </ion-option>
       </ion-select>
     </ion-item>
   </ion-card>
@@ -23,9 +23,9 @@
     <ion-item>
       <ion-label>Linea 2</ion-label>
       <ion-select>
-        <ion-option>Fátima Calderón</ion-option>
-        <ion-option>Adriana Castillo</ion-option>
-        <ion-option>David Alfaro <3</ion-option>
+        <ion-option *ngFor="let referee of referees | async">
+          {{referee.first_name + ' ' + referee.other_names}}
+        </ion-option>
       </ion-select>
     </ion-item>
   </ion-card>
@@ -33,9 +33,9 @@
     <ion-item>
       <ion-label>Mesa</ion-label>
       <ion-select>
-        <ion-option>Fátima Calderón</ion-option>
-        <ion-option>Adriana Castillo</ion-option>
-        <ion-option>David Alfaro <3</ion-option>
+        <ion-option *ngFor="let referee of referees | async">
+          {{referee.first_name + ' ' + referee.other_names}}
+        </ion-option>
       </ion-select>
     </ion-item>
   </ion-card>
