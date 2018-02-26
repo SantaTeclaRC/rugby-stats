@@ -2,18 +2,29 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LineupsPage } from '../lineups/lineups';
 
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
+
+import { Team } from '../../models/team';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  teams: Observable<any>;
+  teamsList: AngularFireList<Team>;
 
+  local: Team = null;
+  away: Team = null;
+
+  constructor(public navCtrl: NavController, afDatabase: AngularFireDatabase) {
+    this.teamsList = afDatabase.list('/teams');
+    this.teams = this.teamsList.valueChanges();
   }
 
-  goToLineups() {
-    this.navCtrl.push(LineupsPage);
-  }
+  canStart() { return (this.local && this.away) && (this.local !== this.away); }
 
+  goToLineups() { this.navCtrl.push(LineupsPage, { local: this.local, away: this.away }); }
 }
