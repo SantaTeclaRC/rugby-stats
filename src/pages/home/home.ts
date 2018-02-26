@@ -16,11 +16,11 @@ export class HomePage {
   teams: Observable<any>;
   teamsList: AngularFireList<Team>;
 
-  home: Team = null;
-  away: Team = null;
+  home: Team;
+  away: Team;
 
   constructor(public navCtrl: NavController, afDatabase: AngularFireDatabase) {
-    this.teamsList = afDatabase.list('/teams');
+    this.teamsList = afDatabase.list('/clubs');
     this.teams = this.teamsList.valueChanges();
   }
 

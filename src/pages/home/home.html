@@ -9,8 +9,8 @@
 <ion-content padding>
   <ion-item>
     <ion-label>Local</ion-label>
-    <ion-select [(ngModel)]="local">
-      <ion-option *ngFor="let team of teams | async">
+    <ion-select [(ngModel)]="home">
+      <ion-option *ngFor="let team of teams | async" [value]="team">
         {{team.abbr | uppercase}}
       </ion-option>
     </ion-select>
@@ -19,7 +19,7 @@
   <ion-item>
     <ion-label>Visitante</ion-label>
     <ion-select [(ngModel)]="away">
-      <ion-option *ngFor="let team of teams | async">
+      <ion-option *ngFor="let team of teams | async" [value]="team">
         {{team.abbr | uppercase}}
       </ion-option>
     </ion-select>
