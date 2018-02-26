@@ -1,6 +1,16 @@
 <ion-content padding>
   <ion-card>
+    <h4>Titulares</h4>
     <ion-item *ngFor="let number of playersQty">
+      <ion-label>{{number}}.</ion-label>
+      <ion-select>
+        <ion-option *ngFor="let player of team?.players">{{ player.first_name + ' ' + player.other_names }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <h4>Banca</h4>
+    <ion-item *ngFor="let number of benchQty">
       <ion-label>{{number}}.</ion-label>
       <ion-select>
         <ion-option *ngFor="let player of team?.players">{{ player.first_name + ' ' + player.other_names }}</ion-option>
