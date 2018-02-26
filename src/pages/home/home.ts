@@ -16,7 +16,7 @@ export class HomePage {
   teams: Observable<any>;
   teamsList: AngularFireList<Team>;
 
-  local: Team = null;
+  home: Team = null;
   away: Team = null;
 
   constructor(public navCtrl: NavController, afDatabase: AngularFireDatabase) {
@@ -24,7 +24,7 @@ export class HomePage {
     this.teams = this.teamsList.valueChanges();
   }
 
-  canStart() { return (this.local && this.away) && (this.local !== this.away); }
+  canStart() { return (this.home && this.away) && (this.home !== this.away); }
 
-  goToLineups() { this.navCtrl.push(LineupsPage, { local: this.local, away: this.away }); }
+  goToLineups() { this.navCtrl.push(LineupsPage, { home: this.home, away: this.away }); }
 }

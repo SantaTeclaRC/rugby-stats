@@ -10,8 +10,8 @@ import { RefereesPage } from '../referees/referees';
 })
 export class LineupsPage {
 
-  localRoot = LineupPage;
-  visitRoot = LineupPage;
+  homeRoot = LineupPage;
+  awayRoot = LineupPage;
   refereeRoot = RefereesPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
